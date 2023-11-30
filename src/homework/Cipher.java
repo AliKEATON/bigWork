@@ -27,7 +27,6 @@ public class Cipher {
     //输入明文方法
     public void setPlaintext(String plaintext) {
         this.plaintext = plaintext;
-        System.out.println("明文设置成功");
     }
 
     //获得明文方法
@@ -38,7 +37,6 @@ public class Cipher {
     //输入密文方法
     public void setCiphertext(String ciphertext) {
         this.ciphertext = ciphertext;
-        System.out.println("密文设置成功");
     }
 
     //获得密文方法
