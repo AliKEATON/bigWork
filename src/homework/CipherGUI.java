@@ -29,7 +29,7 @@ public class CipherGUI {
 
     //构造方法,给变量赋值
     public CipherGUI() {
-        frame = new JFrame("李杭基加密解密系统");//创建标题为加解密系统窗口
+        frame = new JFrame("lhj加密解密系统");//创建标题为加解密系统窗口
         frame.setSize(370, 300);//窗口初始大小
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//点击X关闭窗口
         frame.setResizable(false);//固定窗口大小
