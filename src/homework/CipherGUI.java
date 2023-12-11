@@ -54,8 +54,8 @@ public class CipherGUI {
         setKeyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String key = keyField.getText();
-                if (ifValidKey(key)) {//判断密匙设置是否合法，只有合法其他按钮才可以激活，才能继续操作
+                String key = keyField.getText();//获取文本框中的密钥
+                if (ifValidKey(key)) {//判断密钥设置是否合法，只有合法其他按钮才可以激活，才能继续操作
                     cipher.setKey(key);
                     //启用其他按钮
                     setPlaintextButton.setEnabled(true);
@@ -78,7 +78,7 @@ public class CipherGUI {
             }
         });
 
-        setPlaintextButton.addActionListener(new ActionListener() {
+        setPlaintextButton.addActionListener(new AbstractAction() {
             public void actionPerformed(ActionEvent e) {
                 String plaintext = plaintextField.getText();//接受文本框的内容
                 cipher.setPlaintext(plaintext);//设置明文
@@ -86,7 +86,7 @@ public class CipherGUI {
             }
         });
 
-        setCiphertextButton.addActionListener(new ActionListener() {
+        setCiphertextButton.addActionListener(new AbstractAction() {
             public void actionPerformed(ActionEvent e) {
                 String ciphertext = ciphertextField.getText();
                 cipher.setCiphertext(ciphertext);
@@ -133,7 +133,7 @@ public class CipherGUI {
             }
         });
 
-        exitButton.addActionListener(new ActionListener() {
+        exitButton.addActionListener(new AbstractAction() {
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
